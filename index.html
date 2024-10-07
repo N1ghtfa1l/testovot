@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- intro -->
+    <div class="container">
+        <div class="intro">
+            <button class="video-button" id="play-video">Смотреть видео</button>
+            <div id="video-container" style="display: none;">
+                <iframe id="video-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- showcase -->
+    <div class="showcase">
+        <div class="container">
+            <div class="showcase__inner">
+                <div class="showcase__peas">
+                    <div class="showcase-title">Горох в стручках, 1 кг</div>
+                    <div class="showcase-img">
+                        <img src="img/assets/heart.svg" alt="">
+                        <img src="img/assets/eye.svg" alt="">
+                    </div>
+                    <div class="showcase-notification">
+                        <span class="notification-discount--green">-29%</span>
+                        <span class="notification-day">Товар дня</span>
+                    </div>
+                    <div class="showcase-btn">
+                        <div class="peas-price">570 ₽</div>
+                        <button class="btn-request btn-mobile">Оставить заявку</button>
+                    </div>
+                </div>
+                <div class="showcase__middle">
+                    <div class="middle-berry">
+                        <div class="showcase-img">
+                            <img src="img/assets/heart.svg" alt="">
+                            <img src="img/assets/eye.svg" alt="">
+                        </div>
+                        <div class="showcase-title">Голубика лесная, 200 г</div>
+                        <div class="showcase-notification">
+                            <span class="notification-discount--pink">-31%</span>
+                            <span class="notification-sale">Распродажа</span>
+                        </div>
+                        <div class="showcase-btn">
+                            <div class="peas-price">140 ₽</div>
+                            <button class="btn-request btn-mobile">Оставить заявку</button>
+                        </div>
+                    </div>
+                    <div class="middle-carrot">
+                        <div class="showcase-img">
+                            <img src="img/assets/heart.svg" alt="">
+                            <img src="img/assets/eye.svg" alt="">
+                        </div>
+                        <div class="showcase-title">Морковь мытая, 1 кг</div>
+                        <div class="showcase-notification">
+                            <span class="notification-hit">Хит</span>
+                        </div>
+                        <div class="showcase-btn">
+                            <div class="peas-price">140 ₽</div>
+                            <button class="btn-request btn-mobile">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase__right slider__inner-content">
+                    <div data-slider-card class="right__card-popcorn slider__content-card">
+                        <img src="img/showcase/popcorn.jpg" alt="">
+                        <div class="showcase-notification-right">
+                            <span class="notification-day">Товар дня</span>
+                            <span class="notification-discount--green">-29%</span>
+                        </div>
+                        <div class="showcase-img">
+                            <img src="img/assets/heart.svg" alt="">
+                            <img src="img/assets/eye.svg" alt="">
+                        </div>
+                        <div class="card-title">Попкорн солёный, для СВЧ-печи, 120 г</div>
+                        <div class="showcase__rigth-btn">
+                            <div class="showcase__rigth-price">160 ₽</div>
+                            <button class="btn-request">Оставить заявку</button>
+                        </div>
+                    </div>
+                    <div data-slider-card class="right__card-icecream slider__content-card">
+                        <img src="img/showcase/icecream.jpg" alt="">
+                        <div class="showcase-notification-right">
+                            <span class="notification-hit">Хит</span>
+                        </div>
+                        <div class="showcase-img">
+                            <img src="img/assets/heart.svg" alt="">
+                            <img src="img/assets/eye.svg" alt="">
+                        </div>
+                        <div class="card-title">Попкорн солёный, для СВЧ-печи, 120 г</div>
+                        <div class="showcase__rigth-btn">
+                            <div class="showcase__rigth-price">190 ₽</div>
+                            <button class="btn-request">Оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Оставьте заявку</h2>
+            <form id="request-form" action="php/send_email.php" method="POST">
+                <input type="text" id="name" name="name" placeholder="Ваше имя">
+                <span class="error-message" id="name-error"></span>
+                <input type="tel" id="phone" name="phone" placeholder="Номер телефона">
+                <span class="error-message" id="phone-error"></span>
+                <button type="submit" class="btn-submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/video.js"></script>
+</body>
+
+</html>
